@@ -1,0 +1,32 @@
+<script src="config.js"></script>
+<script src="Javascript_Objects.js"></script>
+<script src="Javascript_InterfaceObjects.js"></script>
+<script src="utils.js"></script>
+<script src="generator.js"></script>
+<script src="templates.js"></script>
+
+<script type="text/javascript">
+	initEngineObjects();
+	// example for merge binding objects.
+	// if(FuzzBinding)
+	// {
+	// 	Binding_Objects = Merge(ListEngineObjects, ListBindingObject)
+	// 	ListObjectTypes = MergeMix(Binding_Objects, ListDefinedInterfaces)
+	// }
+	
+	//===================================================================
+	// incase we just want to fuzz some methods, properties were defined in ListEngineObjects => use MergeMix
+	// ListObjectTypes = MergeMix(ListEngineObjects, ListDefinedInterfaces); 
+
+	//===================================================================
+	//(lazy) fuzz all 
+	
+	ListObjectTypes = ListDefinedInterfaces; 
+
+	//===================================================================
+	// start fuzzing
+	ListObjectsTypeFuzzing.push("Object")
+	var initCode = makeHeader(10) + makeStatement(100)
+	console.log(initCode)
+	eval(initCode)
+</script>

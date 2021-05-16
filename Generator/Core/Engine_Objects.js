@@ -1,0 +1,5 @@
+//ListEngineObjects define object types then we can lookup in ListDefinedInterfaces for more details about methods, properties, onlyme
+ListEngineObjects = {};
+ListTypeNames = ['Object', 'Function']; // this list will use to call method in onlyme
+ListEngineObjects["Object"] = { properties: {}, methods: { "__lookupGetter__" :1, "__lookupSetter__" :1, "isPrototypeOf" :1, "propertyIsEnumerable" :1, "toString" :0, "valueOf" :0, "toLocaleString" :0 }, onlyme: {"assign" :2, "getOwnPropertyDescriptor" :2, "getOwnPropertyDescriptors" :1, "getOwnPropertyNames" :1, "getOwnPropertySymbols" :1, "is" :2, "preventExtensions" :1, "seal" :1, "create" :2, "defineProperties" :2, "defineProperty" :3, "freeze" :1, "getPrototypeOf" :1, "setPrototypeOf" :2, "isExtensible" :1, "isFrozen" :1, "isSealed" :1, "keys" :1, "entries" :1, "values" :1 }, has_parrent: 0, p_typename : "" }
+ListEngineObjects["Function"]={ properties: { "length" :"number", "name" :"string", "arguments" :"object", "caller" :"object"},methods: { "apply" :2, "bind" :1, "call" :1, "toString" :0}, onlyme: {}, has_parrent: 1, p_typename: "Object"}

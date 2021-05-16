@@ -1,0 +1,2 @@
+// define interface objects.
+ListBindingInterfaces = {}

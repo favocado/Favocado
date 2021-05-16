@@ -1,0 +1,35 @@
+
+<script src='../Core/Core_Config.js'></script>
+<script src='../Core/Engine_Objects.js'></script>
+<script src='../Core/Engine_Interfaces.js'></script>
+<script src='../Core/Core_Templates.js'></script>
+<script src='../Core/Core_Utils.js'></script>
+<script src='../Core/Core_Generator.js'></script>
+<script src='../Core/Core_Relative.js'></script>
+
+<script src='../Binding/Binding_Interfaces.js'></script>
+<script src='../Binding/Binding_Objects.js'></script>
+<script src='../Binding/Binding_Static.js'></script>
+<script src='../Binding/Binding_Templates.js'></script>
+<script src='../Binding/Binding_Generator.js'></script>
+<body></body>
+
+<script type="text/javascript">
+
+// enable context dependent fuzzing
+FuzzIncontext = true;
+
+//setup logger
+Logger = console.log
+
+
+initFuzzing(true);
+
+header = Header +  initObjectsToFuzz(2) + makeHeader(20)
+Logger(header);
+var code = makeStatement(300)
+Logger(code);
+Logger("/*DONE*/");
+
+
+</script>
