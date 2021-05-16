@@ -16,10 +16,9 @@ serverip = '127.0.0.1';
 
 // fuzzing with object relation.
 FuzzObjectRelation = 0;
-
 // fuzz in context
 FuzzIncontext = false;
 // log everything for context dependent fuzzing.
 LogAll = false;
 // logger to log test statements, using for context dependent fuzzing only.
-Logger = function(){}
+Logger = console.log

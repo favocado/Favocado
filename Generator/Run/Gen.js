@@ -60,6 +60,9 @@ async function genCode(dir) {
 
     initFuzzing(true);
 
+    if (FuzzBinding) addDocument()
+    var css = gen_Style(20);
+
     header = Header + initObjectsToFuzz() + makeHeader(20)
 
     var count = 0
@@ -71,8 +74,9 @@ async function genCode(dir) {
         count += 1
     }
 
-    code = header + code
-    filename = md5(code) + ".js";
+    code = "<!doctype html> \n<body></body>\n" + css + "<script>" + header + code
+    code += "\n</script></html>"
+    filename = md5(code) + ".html";
 
     fs.writeFile(dir + "/" + filename, code, function (err) {
         if (err) {
