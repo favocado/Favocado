@@ -55,8 +55,10 @@ function makeExpr(d, b) {
 
 function getMethodsByName(name) {
   if (ListObjectTypes.hasOwnProperty(name) == false) {
-    if (isDebug) console.log('FAIL in getMethodsByName: ' + name);
-    undefined.xx = 1;
+    if (isDebug) {
+      console.log('FAIL in getMethodsByName: ' + name);
+      undefined.xx = 1;
+    }
   }
   if (ListObjectTypes[name].p_typename === '')
     return ListObjectTypes[name].methods;
