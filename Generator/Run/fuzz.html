@@ -20,16 +20,28 @@
 FuzzIncontext = true;
 
 //setup logger
-Logger = console.log
-
+Logger = window.confirm
 
 initFuzzing(true);
 
-header = Header +  initObjectsToFuzz(2) + makeHeader(20)
-Logger(header);
-var code = makeStatement(300)
+Logger("START FUZZING");
+Logger("<body></body>");
+css = gen_Style(20);
+Logger(css);
+
+document.body.innerHTML += css;
+
+initFuzzing(true);
+Logger("<script>\n");
+
+Logger("function addNewObject(){}");
+
+header = Header +  initObjectsToFuzz(10) + makeHeader(20)
+var code = makeStatement(3000)
 Logger(code);
 Logger("/*DONE*/");
+
+// window.location.href =  "http://127.0.0.1/Generator/Run/fuzz.html";
 
 
 </script>

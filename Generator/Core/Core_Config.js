@@ -21,5 +21,5 @@ FuzzObjectRelation = 0;
 FuzzIncontext = false;
 // log everything for context dependent fuzzing.
 LogAll = false;
-// logger to log test statements, using for context dependent fuzzing only.
-Logger = function(){}
+// hook Logger -> console.log 
+Logger = console.log
