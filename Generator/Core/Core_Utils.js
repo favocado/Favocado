@@ -55,8 +55,10 @@ function makeExpr(d, b) {
 
 function getMethodsByName(name) {
   if (ListObjectTypes.hasOwnProperty(name) == false) {
-    if (isDebug) console.log('FAIL in getMethodsByName: ' + name);
-    undefined.xx = 1;
+    if (isDebug) {
+      console.log('FAIL in getMethodsByName: ' + name);
+      undefined.xx = 1;
+    }
   }
   if (ListObjectTypes[name].p_typename === '')
     return ListObjectTypes[name].methods;
@@ -179,8 +181,7 @@ function getRandom_Property(obj, forwat = 0, level = 0, myList = null) {
   else type = obj.type;
   WorkingObjectType = type;
   if (!myList.hasOwnProperty(type)) {
-    if (isDebug)
-    {
+    if (isDebug) {
       console.log(type);
       undefined.xx = 1;
     }
@@ -412,7 +413,6 @@ function generateObjectType(typename) {
 
     if (ListDefinedInterfaces.hasOwnProperty(typename)) {
       f = 'gen_' + typename;
-      if (Black_list.includes(f)) return -1;
       if (eval('typeof ' + f) === 'function') {
         // set isfunc=0 to push object to global object(ListAllObject)
         var func = eval(f);
