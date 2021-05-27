@@ -23,3 +23,5 @@ FuzzIncontext = false;
 LogAll = false;
 // hook Logger -> console.log 
 Logger = console.log
+
+Fuzzing_Mojo = false;
