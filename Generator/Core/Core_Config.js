@@ -23,3 +23,5 @@ FuzzIncontext = false;
 LogAll = false;
 // logger to log test statements, using for context dependent fuzzing only.
 Logger = function(){}
+
+Fuzzing_Mojo = false;
