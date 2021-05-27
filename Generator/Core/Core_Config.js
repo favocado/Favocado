@@ -16,7 +16,7 @@ serverip = '127.0.0.1';
 
 // fuzzing with object relation.
 FuzzObjectRelation = 0;
-
+Fuzzing_Mojo = false;
 // fuzz in context
 FuzzIncontext = false;
 // log everything for context dependent fuzzing.
