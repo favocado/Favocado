@@ -1,4 +1,4 @@
-# Favocado for Chromium
+# Favocado
 
 ### Prerequisites
 - [Node](https://nodejs.org/en/download)
