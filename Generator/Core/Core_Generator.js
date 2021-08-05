@@ -368,11 +368,6 @@ function getACuteCall(obj, isglobal = true) {
     }
   }
 
-  if (FuzzAdobe)
-    if (['Color', 'color'].includes(type)) {
-      return cat([stm, '=' + getRandObjectNoFalse(type), ';'], 1);
-    }
-
   if (type.includes('_Ar')) {
     type = type.replace('_Ar', '');
     stm += `[${rand(1000)}%${stm}.length]`;
