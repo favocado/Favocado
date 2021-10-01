@@ -50,7 +50,7 @@ CacheStatementMakerWeight.Count = 0;
 CacheStatementHeaderWeight = [];
 CacheStatementHeaderWeight.totalWeight = 0;
 CacheStatementHeaderWeight.Count = 0;
-var InterestingName = ['valueOf', 'toString', 'lenght'];
+var InterestingName = ['valueOf', 'toString', 'length'];
 var InterestingArg = [
   '[]',
   '[,,]',
